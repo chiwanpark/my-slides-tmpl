@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--
+  HTML5 Presentation Slides Template based on shower.js (http://shwr.me)
+
+  Author: Chiwan Park <chiwanpark@icloud.com>
+  Github: http://github.com/chiwanpark/my-slides-tmpl
+ -->
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-COMPATIBLE" content="ie=edge"/>
+  <meta name="viewport" content="width=680, user-scalable=no"/>
+
+  <title>슬라이드 템플릿</title>
+
+  <link type="text/css" rel="stylesheet/less" href="assets/screen.less"/>
+  <script type="text/javascript" src="assets/less-1.7.4.js"></script>
+  <script type="text/javascript" src="assets/shower.js"></script>
+</head>
+<body class="list">
+<header class="caption">
+  <h1>슬라이드 템플릿 예시</h1>
+
+  <p>테스트 슬라이드 입니다.</p>
+</header>
+
+<section class="slide">
+  <div>
+    <h2>첫 번째 슬라이드 (순서 없는 목록)</h2>
+
+    <ul>
+      <li>항목 1</li>
+      <li>항목 2</li>
+      <li>항목 3</li>
+    </ul>
+  </div>
+</section>
+
+<section class="slide">
+  <div>
+    <h2>두 번째 슬라이드 (순서 있는 목록)</h2>
+
+    <ol>
+      <li>항목 1</li>
+      <li>항목 2</li>
+      <li>항목 3</li>
+    </ol>
+  </div>
+</section>
+
+<section class="slide">
+  <div>
+    <h2>세 번째 슬라이드 (테이블)</h2>
+
+    <table>
+      <thead>
+      <tr>
+        <th>컬럼 1</th>
+        <th>컬럼 2</th>
+        <th>컬럼 3</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th>로우 1</th>
+        <td>내용 1</td>
+        <td>내용 2</td>
+      </tr>
+      <tr>
+        <th>로우 2</th>
+        <td>내용 1</td>
+        <td>내용 2</td>
+      </tr>
+      <tr>
+        <th>로우 3</th>
+        <td>내용 1</td>
+        <td>내용 2</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="slide">
+  <div>
+    <h2>네 번째 슬라이드 (단계별)</h2>
+
+    <div class="next">단계 1</div>
+    <div class="next">단계 2</div>
+    <div class="next">단계 3</div>
+  </div>
+</section>
+
+<div class="progress">
+  <div></div>
+</div>
+
+<!-- Apply transform manually because of using less.js and shower.js -->
+<script type="text/javascript">
+  if (shower.isSlideMode()) {
+    setTimeout(function () {
+      shower._applyTransform(shower._getTransform());
+    }, 200);
+  }
+</script>
+</body>
+</html>
