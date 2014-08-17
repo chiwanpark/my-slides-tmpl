@@ -15,6 +15,8 @@
 
   <link type="text/css" rel="stylesheet/less" href="assets/screen.less"/>
   <script type="text/javascript" src="assets/less-1.7.4.js"></script>
+  <script type="text/javascript"
+          src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js"></script>
   <script type="text/javascript" src="assets/shower.js"></script>
 </head>
 <body class="list">
@@ -91,12 +93,25 @@
   </div>
 </section>
 
+<section class="slide">
+  <div>
+    <h2>다섯 번째 슬라이드 (코드)</h2>
+
+    <pre>
+      <code class="python">@test_annotation
+def test(blah):
+   pass</code>
+    </pre>
+  </div>
+</section>
+
 <div class="progress">
   <div></div>
 </div>
 
 <!-- Apply transform manually because of using less.js and shower.js -->
 <script type="text/javascript">
+  hljs.initHighlightingOnLoad();
   if (shower.isSlideMode()) {
     setTimeout(function () {
       shower._applyTransform(shower._getTransform());
