@@ -23,8 +23,8 @@ body {
   position: relative;
   width: @width;
   height: @height;
-  background: #fff;
-  color: #000;
+  background: @colorBackground;
+  color: @colorText;
 
   -webkit-print-color-adjust: exact;
   -webkit-text-size-adjust: none;
@@ -36,7 +36,7 @@ body {
     right: 0;
     bottom: 45px;
     left: 0;
-    color: #aaa;
+    color: @colorTextSub;
     counter-increment: slide;
     content: counter(slide);
     text-align: center;
@@ -65,7 +65,7 @@ body {
   }
 
   p.note {
-    color: #aaa;
+    color: @colorTextSub;
   }
 
   b, strong {
@@ -84,7 +84,7 @@ body {
   kbd, samp {
     padding: 5px 7px 1px;
     background: rgba(0, 0, 0, 0.08);
-    color: #000;
+    color: @colorText;
     line-height: 1;
     font-family: 'Nanum Gothic Coding', monospace;
   }
@@ -115,7 +115,7 @@ body {
     &:before {
       position: absolute;
       margin: -49px 0 0 -100px;
-      color: #ddd;
+      color: @colorTextSub;
       content: '\201c';
       line-height: 1;
       font-size: 200px;
@@ -137,7 +137,7 @@ body {
       &:before {
         display: inline-block;
         width: 2em;
-        color: #aaa;
+        color: @colorAccent;
         text-align: right;
       }
 
@@ -157,7 +157,7 @@ body {
   }
 
   pre {
-    margin: 0 0 45px;
+    margin: 0 0 25px;
     padding: 3px 0 0;
     counter-reset: code;
     white-space: normal;
@@ -195,6 +195,10 @@ body {
       text-align: left;
       font-weight: bold;
     }
+
+    th, td {
+      border-bottom: 1px solid @colorAccent;
+    }
   }
 
   &.cover, &.shout {
@@ -214,6 +218,20 @@ body {
     }
   }
 
+  &.shout {
+    background: @colorAccent;
+
+    h2 {
+      position: absolute;
+      top: 50%;
+      left: 128px;
+      right: 96px;
+      color: #fff;
+      font-size: 84px;
+      transform: translateY(-50%);
+    }
+  }
+
   .place {
     position: absolute;
     top: 50%;
@@ -229,7 +247,7 @@ body {
     z-index: 1;
     display: none;
     padding: 21px @paddRight 4px @paddLeft;
-    background: #FAFAC4;
+    background: #fafac4;
     box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
     transition: bottom 0.3s;
 
@@ -303,15 +321,15 @@ body {
       }
 
       &:hover:before {
-        box-shadow: 0 0 0 1px #EEE, 0 0 0 12px rgba(255, 255, 255, 0.5);
+        box-shadow: 0 0 0 1px #EEE, 0 0 0 12px @colorAccent;
       }
 
       &:target {
         &:before {
-          box-shadow: 0 0 10px 0 #999, 0 0 0 12px #999;
+          box-shadow: 0 0 10px 0 @colorAccent, 0 0 0 12px @colorAccent;
         }
         &:after {
-          color: #999;
+          color: @colorAccent;
         }
       }
 
@@ -398,7 +416,7 @@ body {
         bottom: 0;
         width: 0;
         height: 8px;
-        background: #999;
+        background: @colorAccent;
         transition: width 0.2s linear;
       }
     }
